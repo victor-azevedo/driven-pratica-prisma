@@ -1,9 +1,7 @@
 import prisma from "../config/database.js";
 
 async function getCars() {
-  console.log("antes");
   const cars = await prisma.cars.findMany();
-  console.log("depois");
   return cars;
 }
 
